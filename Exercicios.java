@@ -44,7 +44,7 @@ public class Exercicios {
 		System.out.println("x=?");
 		String aux= input.nextLine(); 			 // Entrada de dados
 		input.close();				 			// Fechando o Scanner
-		int x=Integer.parseInt(aux);			// Transformando o dado tipo String em Int, possibilitando operaçoes
+		int x=Integer.parseInt(aux);			// Transformando o dado tipo String em Int, possibilitando operaÃ§oes
 		if (x=1) {
 			System.out.println(x);
 			}
@@ -71,7 +71,7 @@ public class Exercicios {
 		System.out.println("n=?");
 		String aux=input.nextLine();					// Entrada de dados
 		input.close();									// Fechando Scanner
-		int n=Integer.parseInt(aux);  					// Transformando o dado tipo String em Int, possibilitando operaçoes
+		int n=Integer.parseInt(aux);  					// Transformando o dado tipo String em Int, possibilitando operaÃ§oes
 		for (int i=1; i<=n; i++) {
 			for (int j=1; j<=i; j++) {
 				System.out.print(i*j +" ");}
@@ -98,7 +98,7 @@ public class Exercicios {
 	 ***********************
 		
 	public static void main(String[] args) {
-		for (int i=0;i<=100;i++) {
+		for (int i=0; ;i++) {
 			System.out.println(+Exercicios.fibonacci(i) +"\t");
 		
 		}
