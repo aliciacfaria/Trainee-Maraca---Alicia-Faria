@@ -73,32 +73,28 @@ if(Pulso1<meio+erro&&Pulso1>meio-erro&&Pulso2>meio+erro){
 if(Pulso1>meio+erro&&Pulso2>meio+erro){
   Pulso1= map(Pulso1, meio+erro, Max, 0, 255);
   Pulso2= map(Pulso2, meio+erro, Max, 0, 255);
-  controle(0, Pulso2/2, 0, 0);
-  controle(0, Pulso1, 0, 0);
+  controle(Pulso1, Pulso2/2, 0, 0);
 }
   
 //diagonal superior esquerda
 if(Pulso1>meio+erro&&Pulso2<meio-erro){
   Pulso1= map(Pulso1, meio+erro, Max, 0, 255);
   Pulso2= map(Pulso2, meio-erro, Min, 0, 255);
-  controle(Pulso1, 0, 0, 0);
-  controle(Pulso2/2, 0, 0, 0);
+  controle(Pulso2/2, Pulso1, 0, 0);
 }
   
 //diagonal inferior direita
 if(Pulso1<meio-erro&&Pulso2>meio+erro){
   Pulso1= map(Pulso1, meio-erro, Min, 0, 255);
   Pulso2= map(Pulso2, meio+erro, Max, 0, 255);
-  controle(0, 0, 0, Pulso1);
-  controle(0, 0, 0, Pulso2/2);
+  controle(0, 0, Pulso1, Pulso2/2);
 }
   
 //diagonal inferior esquerda
 if(Pulso1<meio-erro&&Pulso2<meio-erro){
   Pulso1= map(Pulso1, meio-erro, Min, 0, 255);
   Pulso2= map(Pulso2, meio-erro, Min, 0, 255);
-  controle(0, 0, Pulso1, 0);
-  controle(0, 0, Pulso2/2, 0);
+  controle(0, 0, Pulso2/2, Pulso1);
 }
   
 }
